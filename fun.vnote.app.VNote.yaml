@@ -1,9 +1,9 @@
 id: fun.vnote.app.VNote
 runtime: org.kde.Platform
-runtime-version: '5.15-23.08'
+runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
-base-version: '5.15-23.08'
+base-version: 5.15-23.08
 command: vnote
 finish-args:
   - --share=ipc
@@ -14,11 +14,11 @@ finish-args:
   - --filesystem=xdg-documents
   # reading host Git's configs
   - --filesystem=~/.gitconfig
-  - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess   
+  - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
 rename-icon: vnote
 rename-desktop-file: vnote.desktop
 cleanup-commands:
-  - /app/cleanup-BaseApp.sh  
+  - /app/cleanup-BaseApp.sh
 modules:
 
   - name: git
@@ -32,8 +32,8 @@ modules:
       - NO_TCLTK=YesPlease
     sources:
       - type: archive
-        url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.43.0.tar.xz
-        sha256: 5446603e73d911781d259e565750dcd277a42836c8e392cac91cf137aa9b76ec
+        url: https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.43.1.tar.xz
+        sha256: 2234f37b453ff8e4672c21ad40d41cc7393c9a8dcdfe640bec7ac5b5358f30d2
         x-checker-data:
           type: anitya
           project-id: 5350
