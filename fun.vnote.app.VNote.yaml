@@ -1,9 +1,9 @@
 id: fun.vnote.app.VNote
 runtime: org.kde.Platform
-runtime-version: 5.15-23.08
+runtime-version: 5.15-24.08
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
-base-version: 5.15-23.08
+base-version: 5.15-24.08
 command: vnote
 finish-args:
   - --share=ipc
