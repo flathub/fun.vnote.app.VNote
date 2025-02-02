@@ -42,6 +42,7 @@ modules:
 
   - name: vnote
     buildsystem: cmake
+    sources:    
       - type: git
         url: https://github.com/vnotex/vnote.git
         tag: v3.18.2
