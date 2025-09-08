@@ -45,18 +45,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/vnotex/vnote.git
-        tag: v3.18.2
-        commit: 5e4a6fa72a69c6e32bc6230a2a795181d64af25a
-      - type: shell
-        commands:
-          - mv libs/vtextedit/libs/sonnet/data/gentrigrams/gentrigrams.cpp libs/vtextedit/libs/sonnet/data/
-          - rm -rf libs/vtextedit/libs/sonnet/data/gentrigrams
-          - mv libs/vtextedit/libs/sonnet/data/parsetrigrams/parsetrigrams.cpp libs/vtextedit/libs/sonnet/data/
-          - rm -rf libs/vtextedit/libs/sonnet/data/parsetrigrams
-          - echo -n 'LS0tIDx1bm5hbWVkPgorKysgPHVubmFtZWQ+CkBAIC0xNiw3ICsxNiw3IEBACiBlbmRpZigpCiAKIGFkZF9leGVjdXRhYmxlKGdlbnRyaWdyYW1zCi0gICAgZ2VudHJpZ3JhbXMvZ2VudHJpZ3JhbXMuY3BwCisgICAgZ2VudHJpZ3JhbXMuY3BwCiApCiB0YXJnZXRfY29tcGlsZV9kZWZpbml0aW9ucyhnZW50cmlncmFtcyBQUklWQVRFCiAgICAgU09OTkVUQ09SRV9TVEFUSUNfREVGSU5FCkBAIC0zMSw3ICszMSw3IEBACiApCiAKIGFkZF9leGVjdXRhYmxlKHBhcnNldHJpZ3JhbXMKLSAgICBwYXJzZXRyaWdyYW1zL3BhcnNldHJpZ3JhbXMuY3BwCisgICAgcGFyc2V0cmlncmFtcy5jcHAKICkKIAogdGFyZ2V0X2xpbmtfbGlicmFyaWVzKHBhcnNldHJpZ3JhbXMgUFJJVkFURQoK'
-            | base64 --decode > trigrams.patch
-          - patch libs/vtextedit/libs/sonnet/data/CMakeLists.txt trigrams.patch
-          - rm trigrams.patch
+        tag: v3.19.2
+        commit: 856d2597df4c8aa3113fb2c8605e716585cfefc0
       - type: file
         path: fun.vnote.app.VNote.metainfo.xml
     post-install:
