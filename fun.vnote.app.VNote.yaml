@@ -1,15 +1,17 @@
 id: fun.vnote.app.VNote
 runtime: org.kde.Platform
-runtime-version: '6.8'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
-base-version: '6.8'
+base-version: '6.10'
 command: vnote
 finish-args:
   - --share=ipc
   # checking latest update information
   - --share=network
   - --socket=x11
+  # doesn't have tray in Gnome
+  # - --socket=wayland
   - --device=dri
   - --filesystem=xdg-documents
   # reading host Git's configs
@@ -45,9 +47,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/vnotex/vnote.git
-        tag: v3.20.0
-        commit: 1093b32d5906af9c6d43179d4543975dcf5279de
+        tag: v3.20.1
+        commit: 4ecaf1e5f895b6546b6a89bb9f19c633645348fa
       - type: file
         path: fun.vnote.app.VNote.metainfo.xml
+      - type: patch
+        path: fix-build-with-cmake4.patch
     post-install:
       - install -p -D -m 0644 ${FLATPAK_ID}.metainfo.xml -t "${FLATPAK_DEST}/share/appdata/";
